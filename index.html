@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email verify</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .center-div {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-div">
+      <div class="container">
+        <form action="#" id="form">
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter Email Address"
+            autocomplete="off"
+            onkeydown="validtion()"
+          />
+          <input type="submit" value="Submit" id="submit" />
+          <span id="text"></span>
+        </form>
+      </div>
+    </div>
+    <script>
+      //   function validtion() {
+      //     var form = document.getElementById('form');
+      //     var email = document.getElementById('email').value;
+      //     var text = document.getElementById('text');
+      //     var submit = document.getElementById('submit');
+      //     var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+      //     if (email.match(pattern)) {
+      //       //   form.classList.add('valid');
+      //       //   form.classList.remove('invalid');
+      //       text.innerHTML = 'Your Email address is valid';
+      //       text.style.color = '#00ff00';
+      //     } else {
+      //       //   form.classList.remove('valid');
+      //       //   form.classList.add('invalid');
+      //       text.innerHTML = 'plz enter valid email address';
+      //       text.style.color = '#ff0000';
+      //     }
+      //     if (email == '') {
+      //       //   form.classList.remove('valid');
+      //       //   form.classList.remove('invalid');
+      //       text.innerHTML = '';
+      //       //   text.style.color = '#00ff00';
+      //     }
+      //   }
+
+      submit.addEventListener('click', () => {
+        var form = document.getElementById('form');
+        var email = document.getElementById('email').value;
+        var text = document.getElementById('text');
+        var submit = document.getElementById('submit');
+        var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+        if (email.match(pattern)) {
+          //   form.classList.add('valid');
+          //   form.classList.remove('invalid');
+          text.innerHTML = 'Your Email address is valid';
+          text.style.color = '#00ff00';
+        } else {
+          //   form.classList.remove('valid');
+          //   form.classList.add('invalid');
+          text.innerHTML = 'plz enter valid email address';
+          text.style.color = '#ff0000';
+        }
+        if (email == '') {
+          //   form.classList.remove('valid');
+          //   form.classList.remove('invalid');
+          text.innerHTML = '';
+          //   text.style.color = '#00ff00';
+        }
+      });
+    </script>
+  </body>
+</html>
